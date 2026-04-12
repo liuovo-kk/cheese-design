@@ -1,0 +1,3 @@
+packages:
+  # 所有的子项目都将放在 packages 目录下
+  - 'packages/*'
