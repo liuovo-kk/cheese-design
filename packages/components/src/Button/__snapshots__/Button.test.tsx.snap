@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Button 组件测试 能够正确渲染默认按钮，并且匹配快照 1`] = `
+<DocumentFragment>
+  <button
+    class="btn default middle"
+  >
+    默认按钮
+  </button>
+</DocumentFragment>
+`;
