@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Input } from '@cheese-design/components';
+import * as InputStories from './Input.stories';
+import { CodePreview } from '../src/components/CodePreview';
+
+<Meta of={InputStories} />
+
+# Input 输入框
+
+通过鼠标或键盘输入内容，是最基础的表单域的包装。
+
+## 何时使用
+
+- 需要用户输入表单域内容时。
+- 提供组合型输入框，带搜索的输入框，以及带密码显示的输入框。
+
+---
+
+## 代码演示（结合自定义 Preview 组件）
+
+抛弃臃肿的官方底层，我们自主封装了运行时 `CodePreview` 组件，结合 `highlight.js` 实现了组件渲染与源码高亮的无缝分离！
+
+<CodePreview 
+  code={`import { Input } from '@cheese-design/components';
+
+export default () => (
+  <Input.Password placeholder="请输入密码..." />
+);`}
+>
+  <Input.Password placeholder="请输入密码..." />
+</CodePreview>
