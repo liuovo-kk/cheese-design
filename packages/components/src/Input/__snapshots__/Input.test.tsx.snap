@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Input 组件测试 能够正确渲染基础输入框，并且匹配快照 1`] = `
+<DocumentFragment>
+  <div
+    class="inputWrapper middle"
+  >
+    <input
+      class="input"
+      placeholder="请输入内容"
+    />
+  </div>
+</DocumentFragment>
+`;

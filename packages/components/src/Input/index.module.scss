@@ -1,0 +1,98 @@
+.inputWrapper {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background-color: #ffffff;
+  transition: all 0.3s;
+  width: 100%;
+
+  &:hover {
+    border-color: #1677ff;
+  }
+
+  &:focus-within {
+    border-color: #1677ff;
+    box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1);
+  }
+
+  /* 尺寸变体 */
+  &.small {
+    padding: 0 7px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  &.middle {
+    padding: 0 11px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  &.large {
+    padding: 0 11px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  /* 禁用状态 */
+  &.disabled {
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    cursor: not-allowed;
+
+    &:hover {
+      border-color: #d9d9d9;
+    }
+
+    .input {
+      cursor: not-allowed;
+      color: rgba(0, 0, 0, 0.25);
+      background-color: transparent;
+    }
+  }
+
+  /* 内部原生 input 的样式清理 */
+  .input {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #333333;
+    font-size: inherit;
+
+    &::placeholder {
+      color: #bfbfbf;
+    }
+  }
+
+  /* 前缀与后缀插槽样式 */
+  .prefix,
+  .suffix {
+    display: flex;
+    align-items: center;
+    color: #bfbfbf;
+  }
+
+  .prefix {
+    margin-right: 4px;
+  }
+
+  .suffix {
+    margin-left: 4px;
+  }
+
+  /* 密码小眼睛专属交互 */
+  .passwordIcon {
+    cursor: pointer;
+    transition: color 0.3s;
+    user-select: none;
+
+    &:hover {
+      color: #666666;
+    }
+  }
+}

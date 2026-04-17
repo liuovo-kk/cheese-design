@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1776260896820" clover="3.2.0">
-  <project timestamp="1776260896820" name="All files">
-    <metrics statements="6" coveredstatements="6" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1" elements="16" coveredelements="16" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
-    <file name="index.tsx" path="D:\学习\前端实习资料\project\cheese-design\packages\components\src\Button\index.tsx">
+<coverage generated="1776435629829" clover="3.2.0">
+  <project timestamp="1776435629830" name="All files">
+    <metrics statements="30" coveredstatements="30" conditionals="27" coveredconditionals="27" methods="4" coveredmethods="4" elements="61" coveredelements="61" complexity="0" loc="30" ncloc="30" packages="2" files="4" classes="4"/>
+    <package name="Button">
       <metrics statements="6" coveredstatements="6" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="22" count="3" type="stmt"/>
-      <line num="28" count="3" type="stmt"/>
-    </file>
+      <file name="index.tsx" path="D:\学习\前端实习资料\project\cheese-design\packages\components\src\Button\index.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="Input">
+      <metrics statements="24" coveredstatements="24" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="3"/>
+      <file name="Input.tsx" path="D:\学习\前端实习资料\project\cheese-design\packages\components\src\Input\Input.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="35" count="10" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+      </file>
+      <file name="Password.tsx" path="D:\学习\前端实习资料\project\cheese-design\packages\components\src\Input\Password.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="D:\学习\前端实习资料\project\cheese-design\packages\components\src\Input\index.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
