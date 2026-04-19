@@ -33,12 +33,12 @@ jobs:
       - name: 安装所有依赖
         run: pnpm install
 
-      - name: 运行极其严苛的单元测试
-        run: pnpm run test
+      - name: 运行单元测试
+        run: pnpm --filter ./packages/components run test
         # 如果这里报错，流水线会极其强硬地中断，绝不把有 Bug 的代码发布出去！
 
       - name: 构建 Storybook 静态文档
-        run: pnpm run build-storybook
+        run: pnpm --filter ./packages/docs run build-storybook
         # 注意：这里默认你在根目录或者有全局脚本能运行打包
         # 默认打包出来的静态文件通常在一个叫 storybook-static 的文件夹里
 
@@ -48,7 +48,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 极其关键的路径：请确认你 Storybook 打包后的产物具体在哪个路径
-          # 如果你在根目录打包，通常是 storybook-static
-          # 如果在 docs 包里，可能是 packages/docs/storybook-static
-          publish_dir: ./storybook-static
+          publish_dir: ./packages/docs/storybook-static
