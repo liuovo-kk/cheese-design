@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Upload 组件企业级测试 Upload component should match snapshot (text 模式) 1`] = `
+<DocumentFragment>
+  <div
+    class="cheese-upload-wrapper"
+  >
+    <div
+      class="cheese-upload-trigger"
+      style="display: inline-block; width: auto;"
+    >
+      <button>
+        上传
+      </button>
+    </div>
+    <input
+      class="cheese-upload-file-input"
+      style="display: none;"
+      type="file"
+    />
+    <ul
+      class="cheese-upload-list cheese-upload-list-text"
+      style="list-style: none; padding: 0px; margin-top: 10px;"
+    >
+      <li
+        class="textItem "
+      >
+        <div
+          class="info"
+        >
+          <span
+            class="name"
+          >
+            <span
+              class="icon"
+            >
+              📄
+            </span>
+            file1.txt
+          </span>
+          <div
+            class="actions"
+          >
+            <span
+              class="removeBtn"
+            >
+              🗑️
+            </span>
+          </div>
+        </div>
+      </li>
+      <li
+        class="textItem "
+      >
+        <div
+          class="info"
+        >
+          <span
+            class="name"
+          >
+            <span
+              class="icon"
+            >
+              📄
+            </span>
+            file2.png
+          </span>
+          <div
+            class="actions"
+          >
+            <span
+              class="percent"
+            >
+              50%
+            </span>
+            <span
+              class="removeBtn"
+            >
+              🗑️
+            </span>
+          </div>
+        </div>
+        <div
+          class="progressWrapper"
+        >
+          <div
+            class="progressBar"
+            style="width: 50%;"
+          />
+        </div>
+      </li>
+      <li
+        class="textItem error"
+      >
+        <div
+          class="info"
+        >
+          <span
+            class="name"
+          >
+            <span
+              class="icon"
+            >
+              📄
+            </span>
+            file3.doc
+          </span>
+          <div
+            class="actions"
+          >
+            <span
+              class="removeBtn"
+            >
+              🗑️
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

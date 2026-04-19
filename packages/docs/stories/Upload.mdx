@@ -1,0 +1,225 @@
+import { Meta, Story, Controls } from '@storybook/addon-docs/blocks';
+import * as UploadStories from './Upload.stories.tsx';
+import { CodePreview } from '../src/components/CodePreview';
+
+<Meta of={UploadStories} />
+
+# Upload 上传
+
+极其优雅、支持拖拽与照片墙的企业级数据录入组件，为用户提供极其顺滑的文件上传体验。
+
+## 💡 何时使用
+
+- 当你需要将本地的图片、文档、视频等文件上传至服务器时。
+- 当你需要大厂级别的交互体验（如拖拽上传、精准进度条、大图全屏预览）时。
+- 当你需要在一个表单中收集用户的多媒体资料时。
+
+---
+
+## 🚀 代码演示
+
+<CodePreview
+  title="1. 基础点击上传"
+  desc="最经典的上传模式。结合 beforeUpload 拦截器，可以轻松限制文件大小或格式。"
+  code={`<Upload 
+  action="https://jsonplaceholder.typicode.com/posts/"
+  name="fileName"
+  multiple={true}
+  beforeUpload={(file) => file.size / 1024 < 500}
+>
+  <Button type="primary">点击上传文件</Button>
+</Upload>`}
+>
+  <Story of={UploadStories.Basic} />
+</CodePreview>
+
+<CodePreview
+  title="2. 拖拽上传 (Dragger)"
+  desc="把文件拖入指定区域，即可极其丝滑地完成上传，支持单次或批量拖拽。底层完美解决了 HTML5 原生拖放 API 的种种陷阱。"
+  code={`<Upload 
+  action="https://jsonplaceholder.typicode.com/posts/"
+  drag={true}
+  multiple={true}
+>
+  <div className="custom-drag-area">
+    <span>📁 点击或将文件拖拽到这里上传</span>
+  </div>
+</Upload>`}
+>
+  <Story of={UploadStories.DragSimulation} />
+</CodePreview>
+
+<CodePreview
+  title="3. 极其华丽的照片墙 (Picture Card)"
+  desc="专为电商主图、社交分享、头像上传等“重视觉”场景打造。上传完毕后自动生成极具质感的正方形缩略图，并支持点击全屏放大预览。"
+  code={`<Upload 
+  action="https://jsonplaceholder.typicode.com/posts/"
+  listType="picture-card"
+  multiple={true}
+  accept="image/*"
+  onPreview={(file) => handlePreview(file)}
+>
+  <div className="upload-btn">+ 上传照片</div>
+</Upload>`}
+>
+  <Story of={UploadStories.PictureCard} />
+</CodePreview>
+
+---
+
+## ⚙️ API 字典
+
+极其严谨的底层接口设计，完美支持各种高度定制化的业务需求。
+
+<Controls />
+
+<table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>说明</th>
+      <th>类型</th>
+      <th>默认值</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <strong>
+          <code>action</code>
+        </strong>
+      </td>
+      <td>极其核心：必填！上传的接口地址</td>
+      <td>
+        <code>string</code>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>accept</code>
+        </strong>
+      </td>
+      <td>接受上传的文件类型</td>
+      <td>
+        <code>string</code>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>multiple</code>
+        </strong>
+      </td>
+      <td>是否开启多文件批量选择</td>
+      <td>
+        <code>boolean</code>
+      </td>
+      <td>
+        <code>false</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>drag</code>
+        </strong>
+      </td>
+      <td>是否开启拖拽上传</td>
+      <td>
+        <code>boolean</code>
+      </td>
+      <td>
+        <code>false</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>listType</code>
+        </strong>
+      </td>
+      <td>列表极其丰富的渲染模式</td>
+      <td>
+        <code>'text' | 'picture' | 'picture-card'</code>
+      </td>
+      <td>
+        <code>'text'</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>beforeUpload</code>
+        </strong>
+      </td>
+      <td>上传文件之前的拦截钩子</td>
+      <td>
+        <code>(file: File) =&gt; boolean</code>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>onProgress</code>
+        </strong>
+      </td>
+      <td>文件上传进度发生变化时的回调</td>
+      <td>
+        <code>(percent: number, file: File) =&gt; void</code>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>onSuccess</code>
+        </strong>
+      </td>
+      <td>文件上传成功的回调</td>
+      <td>
+        <code>(data: any, file: File) =&gt; void</code>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>onError</code>
+        </strong>
+      </td>
+      <td>文件上传失败时的回调</td>
+      <td>
+        <code>(err: any, file: File) =&gt; void</code>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>onChange</code>
+        </strong>
+      </td>
+      <td>文件状态发生变化时的回调</td>
+      <td>
+        <code>(file: UploadFile) =&gt; void</code>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          <code>onPreview</code>
+        </strong>
+      </td>
+      <td>点击缩略图进行预览时的回调</td>
+      <td>
+        <code>(file: UploadFile) =&gt; void</code>
+      </td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>

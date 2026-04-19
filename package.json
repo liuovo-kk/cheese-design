@@ -24,6 +24,10 @@
     "eslint-plugin-storybook": "^10.3.5",
     "husky": "^9.1.7",
     "prettier": "^3.8.2",
+    "remark-gfm": "^4.0.1",
     "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "highlight.js": "^11.11.1"
   }
 }
