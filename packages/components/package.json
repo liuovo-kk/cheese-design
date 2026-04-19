@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build-storybook": "storybook build"
   },
   "keywords": [],
   "author": "",
