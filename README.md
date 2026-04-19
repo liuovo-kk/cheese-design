@@ -1,9 +1,9 @@
 # Cheese Design
 
+[在线文档预览](https://liuovo-kk.github.io/cheese-design/)
+
 ![CI/CD Pipeline](https://github.com/liuovo-kk/cheese-design/workflows/Cheese%20Design%20CI/CD%20Pipeline/badge.svg)
-![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)
-![React](https://img.shields.io/badge/React-18.x-61dafb.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+...
 
 基于 React 的高质量基础组件库。本项目采用现代化的工程化方案，旨在通过从 0 到 1 的构建过程，实现一个具备完整生命周期管理、自动化测试及专业文档体系的企业级组件库。
 
