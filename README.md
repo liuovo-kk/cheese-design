@@ -20,7 +20,7 @@
 
 ## 项目架构
 
-````text
+```text
 cheese-design/
 ├── packages/
 │   ├── components/       # 组件库核心源码
@@ -31,6 +31,7 @@ cheese-design/
 ├── .github/workflows/    # CI/CD 自动化流水线配置
 ├── package.json          # 根目录依赖管理
 └── pnpm-workspace.yaml   # Monorepo 工作区定义
+```
 
 ## 安装
 
@@ -38,7 +39,7 @@ cheese-design/
 npm install cheese-design
 # 或者
 pnpm add cheese-design
-````
+```
 
 ## 快速上手
 
