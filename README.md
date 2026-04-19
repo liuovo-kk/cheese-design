@@ -1,10 +1,5 @@
 # Cheese Design
 
-[在线文档预览](https://liuovo-kk.github.io/cheese-design/)
-
-![CI/CD Pipeline](https://github.com/liuovo-kk/cheese-design/workflows/Cheese%20Design%20CI/CD%20Pipeline/badge.svg)
-...
-
 基于 React 的高质量基础组件库。本项目采用现代化的工程化方案，旨在通过从 0 到 1 的构建过程，实现一个具备完整生命周期管理、自动化测试及专业文档体系的企业级组件库。
 
 ## 技术栈
@@ -25,7 +20,7 @@
 
 ## 项目架构
 
-```text
+````text
 cheese-design/
 ├── packages/
 │   ├── components/       # 组件库核心源码
@@ -36,14 +31,20 @@ cheese-design/
 ├── .github/workflows/    # CI/CD 自动化流水线配置
 ├── package.json          # 根目录依赖管理
 └── pnpm-workspace.yaml   # Monorepo 工作区定义
-安装
-Bash
+
+## 安装
+
+```bash
 npm install cheese-design
 # 或者
 pnpm add cheese-design
-快速上手
-1. 全量引入
-TypeScript
+````
+
+## 快速上手
+
+### 1. 全量引入
+
+```typescript
 import { Button, Upload } from 'cheese-design';
 
 const App = () => (
@@ -51,45 +52,60 @@ const App = () => (
     <Button type="primary">开始上传</Button>
   </Upload>
 );
-2. 按需引入（推荐）
+```
+
+### 2. 按需引入（推荐）
+
 本组件库默认支持基于 ES modules 的 tree-shaking，直接导入即可实现按需加载。
 
-TypeScript
+```typescript
 import { Button } from 'cheese-design';
-已实现组件
-通用组件
-Button 按钮
+```
 
-数据录入组件
-Input 输入框
+## 已实现组件
 
-Upload 上传（支持文件拖拽、进度展示、beforeUpload 异步拦截及自定义渲染）
+### 通用组件
 
-开发指南
-本地启动
-Bash
+- **Button** 按钮
+
+### 数据录入组件
+
+- **Input** 输入框
+- **Upload** 上传（支持文件拖拽、进度展示、beforeUpload 异步拦截及自定义渲染）
+
+## 开发指南
+
+### 本地启动
+
+```bash
 # 安装依赖
 pnpm install
 
 # 启动文档开发环境
 pnpm run dev:docs
-单元测试
-Bash
+```
+
+### 单元测试
+
+```bash
 # 运行 Jest 测试套件
 pnpm run test
 
 # 查看测试覆盖率
 pnpm run test --coverage
-生产打包
-Bash
+```
+
+### 生产打包
+
+```bash
 # 构建组件库与文档
 pnpm run build
-代码规范与保障
+```
+
+## 代码规范与保障
+
 项目集成以下工具确保提交的代码符合高质量标准：
 
-Husky + lint-staged：在 Git commit 前自动执行代码格式化与校验。
-
-Jest：强制执行单元测试，确保核心逻辑与边界行为正确。
-
-TypeScript：全链路强类型支持，减少运行时错误。
-```
+- **Husky + lint-staged**：在 Git commit 前自动执行代码格式化与校验。
+- **Jest**：强制执行单元测试，确保核心逻辑与边界行为正确。
+- **TypeScript**：全链路强类型支持，减少运行时错误。
